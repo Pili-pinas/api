@@ -1,20 +1,17 @@
 ---
 swagger: "2.0"
 info:
-  description: "This is a sample server Petstore server.  You can find out more about\
-    \ Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).\
-    \  For this sample, you can use the api key `special-key` to test the authorization\
-    \ filters."
+  description: "This is the API documentation for the Pili-pinas project."
   version: "1.0.5"
-  title: "Swagger Petstore"
+  title: "Pili-pinas"
   termsOfService: "http://swagger.io/terms/"
   contact:
-    email: "apiteam@swagger.io"
+    email: "change@pili-pinas.com"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "petstore.swagger.io"
-basePath: "/v2"
+host: "pili-pinas.github.io"
+basePath: "/api"
 tags:
 - name: "users"
   description: "User sign up and login"
@@ -107,7 +104,7 @@ paths:
         405:
           description: "Validation exception"
       security:
-      - petstore_auth:
+      - pilipinas_auth::
         - "write:candidates"
         - "read:candidates"
     get:
@@ -135,7 +132,7 @@ paths:
         405:
           description: "Validation exception"
       security:
-      - petstore_auth:
+      - pilipinas_auth::
         - "write:candidates"
         - "read:candidates"
   /profiles/findByName:
